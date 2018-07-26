@@ -110,8 +110,8 @@
                                <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="yummyDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Canales</a>
                                     <div class="dropdown-menu" aria-labelledby="yummyDropdown">
-                                        <a class="dropdown-item" href="tevenet">Canales HD</a>
-                                        <a class="dropdown-item" href="archive.html">Canales Análogos</a>                                        
+                                        <a class="dropdown-item" href="faces/canaleshd.xhtml">Canales HD</a>
+                                        <a class="dropdown-item" href="faces/canalesanalogos.xhtml">Canales Análogos</a>                                        
                                     </div>
                                 </li>
                                 <li class="nav-item">
@@ -532,14 +532,16 @@ iconos inferiores redes sociales
 <!--area5******************************************************************************************************************************************************************************   
 panel de navegacion inferior y derechos de autor
 -->
-      <ui:insert name="area5"> 
+      
        <!-- ****** Footer Menu Area Start ****** -->
     <footer class="footer_area">
+    
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="footer-content">
                          <!--Info Area-->
+    <ui:insert name="area5"> 
             <div class="contact-info-area section_padding_80_50">
                 <div class="row">
                     <!-- Single Contact Info -->
@@ -593,11 +595,12 @@ panel de navegacion inferior y derechos de autor
                     </div>
                 </div>
             </div>
+    </ui:insert> 
                     </div>
                 </div>
             </div>
         </div>
-
+  
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -609,7 +612,13 @@ panel de navegacion inferior y derechos de autor
             </div>
         </div>
     </footer>
-      </ui:insert>  
+     
+
+
+
+
+
+
     <script src="resources/js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
     <script src="resources/js/bootstrap/popper.min.js"></script>
