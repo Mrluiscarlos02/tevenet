@@ -3,12 +3,16 @@
     Document   : masterpage
     Created on : 24/07/2018, 06:49:49 AM
     Author     : ingluiscarlos02@gmail.com
+
+pendientes: SECCION CONTACTENOS faltante boton adjuntar archivo y estudiar si ocultar correo electronico o no.  
 -->
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
-    <head>
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
         <title>Tevenet-Cable Cauca S.A</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
        <!-- Favicon -->
@@ -17,9 +21,9 @@
         <link href="resources/style.css" rel="stylesheet" />
        <!-- Responsive CSS -->
         <link href="resources/css/responsive/responsive.css" rel="stylesheet" />
-    </head>
+    </h:head>
     
-    <body>
+    <h:body>
        
 <!-- area 1 ************************************************************************************************************************************************************************** 
          *LOGOS tevenet y cable cauca
@@ -321,7 +325,7 @@ blog con panel lateral derecho puntos de pago.
 <!--area2******************************************************************************************************************************************************************************   
 contactenos
 -->
-     <ui:insert name="area2"><!-- Contact Form  -->
+     
     <div class="contact-area section_padding_80">
         <div class="container">
             <div class="contact-form-area">
@@ -334,29 +338,68 @@ contactenos
                         <div class="contact-form wow fadeInUpBig" data-wow-delay="0.6s">
                             <h2 class="contact-form-title mb-30">Si tienes alguna pregunta contáctenos hoy!</h2>
                             <!-- Contact Form -->
-                            <form action="#" method="post">
+                            <h:form>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="contact-name" placeholder="Nombre completo"/>
+                                    <p:inputText type="text" class="form-control" id="contact-name" placeholder="Nombre completo" value="#{MailBean.nombre}"/>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" id="contact-email" placeholder="Email"/>
-                                </div>
+                                    <p:inputText type="email" class="form-control" id="contact-email" placeholder="Email" value="#{MailBean.email}"/>
+                                </div>                               
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="contact-website" placeholder="Teléfono"/>
+                                    <p:inputText type="text" class="form-control" id="contact-website" placeholder="Teléfono" value="#{MailBean.telefono}"/>
                                 </div>
+                                
+                            
+                                                          
+                              <div class="form-group">      
+                                <h:selectOneMenu class="form-control" value = "#{MailBean.destinatario}"> 
+                                 <f:selectItem itemValue = "ingluiscarlos02@gmail.com" itemLabel = "Área solicitada" /> 
+                                 <f:selectItem itemValue = "luiscarlos-2@hotmail.com" itemLabel = "Departamento Técnico" /> 
+                                 <f:selectItem itemValue = "luiscarlosgarciacampo@gmail.com" itemLabel = "Area de Cartera" /> 
+                                 <f:selectItem itemValue = "ingluiscarlos02@gmail.com" itemLabel = "Atención al cliente" />                                 
+                                </h:selectOneMenu>  
+                              </div>
+                                  
+                          
+                              <div class="form-group">  
+                                <h:selectOneMenu class="form-control" value = "#{MailBean.asunto}"> 
+                                 <f:selectItem itemValue = "Solicitud" itemLabel = "Solicitud" /> 
+                                 <f:selectItem itemValue = "Peticion" itemLabel = "Peticion" /> 
+                                 <f:selectItem itemValue = "Queja / Reclamo" itemLabel = "Queja / Reclamo" /> 
+                                 <f:selectItem itemValue = "Envio pago realizado por PSE" itemLabel = "Envio pago realizado por PSE" />    
+                                 <f:selectItem itemValue = "Error en saldo" itemLabel = "Error en saldo" />     
+                                </h:selectOneMenu>  
+                              </div>
+                                
+                                
+                              
                                 <div class="form-group">
-                                    <textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                                    <p:inputTextarea class="form-control" cols="30" rows="10" placeholder="Mensaje" value="#{MailBean.mensaje}"></p:inputTextarea>
                                 </div>
-                                <button type="submit" class="btn contact-btn">enviar mensaje</button>
-                            </form>
+                                <!--
+                                <div class="form-group"> 
+                                  <div class="form-group">
+                                      <label for="ejemplo_archivo_1">Adjuntar un archivo</label>
+                                      <input type="file" id="ejemplo_archivo_1"/>
+    
+                                   </div>
+                                </div>   
+                                -->
+                                
+                                <div class="checkbox">
+  
+                                 </div>
+                                
+                                                             
+                                <h:commandButton type="submit" class="btn contact-btn" action="#{MailBean.send()}" value="Enviar Mensaje" />  
+                                
+                            </h:form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</ui:insert>
-    
 
 
 <!--area3******************************************************************************************************************************************************************************   
@@ -627,5 +670,5 @@ panel de navegacion inferior y derechos de autor
     <!-- All Plugins JS -->
     <script src="resources/js/others/plugins.js"></script>
     <!-- Active JS -->
-    <script src="resources/js/active.js"></script></body>
+    <script src="resources/js/active.js"></script></h:body>
 </html>
