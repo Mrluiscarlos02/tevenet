@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    
+    
+ <ui:composition template="masterpage.xhtml">
+
+ <ui:define name="seccion1">
+        
+    <!-- ****** Breadcumb Area Start ****** -->
+    <div class="breadcumb-area" style="background-image: url(resources/img/servicios/antenacablecauca.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="bradcumb-title text-center">
+                        <h2>Canales de noticias</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="breadcumb-nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Inicio</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Canales de noticias</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ****** Breadcumb Area End ****** -->
+    </ui:define>
+        
+<ui:define name="seccion2">
+    
+   <!-- ****** Archive Area Start ****** -->
+    <section class="archive-area section_padding_80">
+        <div class="container">
+            <div class="row">
+
+               <!-- Single Post -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-post wow fadeInUp" data-wow-delay="0.2s">
+                        <!-- Post Thumb -->
+                        <div class="post-thumb">
+                            <img src="resources/img/canales/noticias/CNN.png" height="150"  alt=""/>
+                        </div>
+                        <!-- Post Content -->
+                        <div class="post-content">
+                            <div class="post-meta d-flex">
+                                <div class="post-author-date-area d-flex">
+                                    <!-- Tipo De programación -->
+                                    <div class="breadcrumb-item active">
+                                        variada       
+                                    </div>                                    
+                                </div>                              
+                            </div>
+                            <a href="#">
+                                <h4 class="post-headline">The Top Breakfast And Brunch Spots In Hove, Brighton</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Post -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-post wow fadeInUp" data-wow-delay="0.4s">
+                        <!-- Post Thumb -->
+                        <div class="post-thumb">
+                            <img src="resources/img/canales/noticias/Cable_Noticias.png"  height="150"  alt=""/>
+                        </div>
+                        <!-- Post Content -->
+                        <div class="post-content">
+                            <div class="post-meta d-flex">
+                                <div class="post-author-date-area d-flex">
+                                      <!-- Tipo De programación -->
+                                    <div class="breadcrumb-item active">
+                                        variada       
+                                    </div>  
+                                </div>
+                                
+                            </div>
+                            <a href="#">
+                                <h4 class="post-headline">Where To Get The Best Sunday Roast In The Cotswolds</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+               
+                <!-- Single Post -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-post wow fadeInUp" data-wow-delay="0.8s">
+                        <!-- Post Thumb -->
+                        <div class="post-thumb">
+                            <img src="resources/img/canales/noticias/TeleSUR.png"   height="150"  alt=""/>
+                        </div>
+                        <!-- Post Content -->
+                        <div class="post-content">
+                            <div class="post-meta d-flex">
+                                <div class="post-author-date-area d-flex">
+                                        <!-- Tipo De programación -->
+                                    <div class="breadcrumb-item active">
+                                        variada       
+                                    </div>  
+                                </div>
+                               
+                            </div>
+                            <a href="#">
+                                <h4 class="post-headline">The 10 Best Brunch Spots In Newcastle, England</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+           
+             <!-- Nota canales nacionales por ciudad -->
+             <blockquote class="yummy-blockquote mt-30 mb-30">
+                  <h5 class="mb-30" style="text-align: justify;">El orden de canales presentado en la página ha sido escogido aleatoriamente. La existencia de canales y el orden de los mismos pueden variar por municipio.</h5>
+                  <h6 class="text-muted"> <h:outputLabel value="${mesActual.mes}" > </h:outputLabel> </h6> 
+             </blockquote>
+                
+            </div>
+        </div>
+    </section>
+    <!-- ****** Archive Area End ****** -->   
+    
+</ui:define>
+   
+
+     
+     
+     
+<ui:define name="seccion3.0"></ui:define> 
+
+<ui:define name="area3"></ui:define>
+
+<ui:define name="area4"></ui:define>
+
+<ui:define name="area5"></ui:define>
+     
+   
+</ui:composition>
+
+
+    
+    
+</html>
