@@ -35,14 +35,6 @@ pendientes: SECCION CONTACTENOS faltante boton adjuntar archivo y estudiar si oc
         <div class="yummy-load"></div>
     </div>
 
-    <!-- sesion imagen de fondo Background Pattern Swither
-    <div id="pattern-switcher">
-        Bg Pattern
-    </div>
-    <div id="patter-close">
-        <i class="fa fa-times" aria-hidden="true"></i>
-    </div> -->
-
     <!-- ****** Top Header Area Start ****** -->
     <div class="top_header_area">
         <div class="container">
@@ -88,14 +80,17 @@ pendientes: SECCION CONTACTENOS faltante boton adjuntar archivo y estudiar si oc
     <!-- ****** Top Header Area End ****** -->
 
     <!-- ****** Header Area Start ****** -->
+  <h:form id="paneldenavegacion">
     <header class="header_area">
         <div class="container">
             <div class="row">
                 <!-- Logo Area Start -->
                 <div class="col-12">
-                    <div class="logo_area text-center">
-                        <a href="faces/faces/index.xhtml" class="yummy-logo"> <img src="resources/img/logos/LOGO-TEVENET-11.png" width="225" height="120" alt="TEVENET"/> <img src="resources/img/logos/LOGO-CABLE-CAUCA.png" width="216" height="139" alt=""/></a>
-                       
+                    <div class="logo_area text-center">                         
+                        <p:commandLink class="yummy-logo"  action="index?faces-redirect=true" >
+                         <p:graphicImage value="resources/img/logos/LOGO-TEVENET-11.png" width="225" height="120" alt="TEVENET"/> 
+                         <p:graphicImage value="resources/img/logos/LOGO-CABLE-CAUCA.png" width="216" height="139" alt="CABLE CAUCA S.A"/>                         
+                        </p:commandLink>                       
                     </div>               
                 </div>
             </div>
@@ -107,40 +102,55 @@ pendientes: SECCION CONTACTENOS faltante boton adjuntar archivo y estudiar si oc
                         <div class="collapse navbar-collapse justify-content-center" id="yummyfood-nav">
                             <ul class="navbar-nav" id="yummy-nav">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="faces/faces/index.xhtml">Inicio <span class="sr-only">(current)</span></a>
+                                    <p:commandLink  class="nav-link" value="Inicio"  action="index?faces-redirect=true" />   
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="faces/servicios.xhtml">Servicios</a>
+                                    <p:commandLink  class="nav-link" value="Servicios"  action="servicios?faces-redirect=true" />   
                                 </li>                                
                                <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="yummyDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Canales</a>
                                     <div class="dropdown-menu" aria-labelledby="yummyDropdown">
-                                        <a class="dropdown-item" href="faces/canaleshd.xhtml">Canales HD</a>
-                                        <a class="dropdown-item" href="faces/canalesanalogos.xhtml">Canales Análogos</a>                                        
+                                        <p:commandLink  class="dropdown-item" value="Canales HD"  action="canaleshd?faces-redirect=true" />  
+                                        <p:commandLink  class="dropdown-item" value="peliculas"  action="canalescine?faces-redirect=true" />  
+                                        <p:commandLink  class="dropdown-item" value="culturales"  action="canalesculturales?faces-redirect=true" />  
+                                        <p:commandLink  class="dropdown-item" value="deportes"  action="canalesdeportes?faces-redirect=true" />  
+                                        <p:commandLink  class="dropdown-item" value="infantiles"  action="canalesinfantiles?faces-redirect=true" />  
+                                        <p:commandLink  class="dropdown-item" value="musciales"  action="canalesmusicales?faces-redirect=true" />  
+                                        <p:commandLink  class="dropdown-item" value="nacionales"  action="canalesnacionales?faces-redirect=true" />  
+                                        <p:commandLink  class="dropdown-item" value="noticias"  action="canalesnoticias?faces-redirect=true" />  
+                                        <p:commandLink  class="dropdown-item" value="religiosos"  action="canalesreligiosos?faces-redirect=true" />  
+                                        <p:commandLink  class="dropdown-item" value="variedades"  action="canalesvariedades?faces-redirect=true" />                                        
+                                    </div>                                     
+                                </li>
+                                 <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="yummyDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Canales Propios</a>
+                                    <div class="dropdown-menu" aria-labelledby="yummyDropdown">
+                                        <p:commandLink  class="dropdown-item" value="Cauca Visión"  action="caucavision?faces-redirect=true" />  
                                     </div>
                                 </li>
+                                
                                 <li class="nav-item">
-                                    <a class="nav-link" href="faces/caucavision.xhtml">Cauca Visión</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="faces/empresa.xhtml">Nuestra Empresa</a>
+                                    <p:commandLink  class="nav-link" value="Nuestra Empresa"  action="empresa?faces-redirect=true" />  
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="yummyDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">normatividad</a>
                                     <div class="dropdown-menu" aria-labelledby="yummyDropdown">
-                                        <a class="dropdown-item" href="faces/internetsano.xhtml">Internet Sano</a>                                                                             
+                                        <p:commandLink  class="dropdown-item" value="Internet Sano"  action="internetsano?faces-redirect=true" />  
                                     </div>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="faces/contacto.xhtml">Contacto</a>
+                                    <p:commandLink  class="nav-link" value="Contacto"  action="contacto?faces-redirect=true" />  
                                 </li>
+                            
                             </ul>
                         </div>
                     </nav>
                 </div>
             </div>
         </div>
-    </header></ui:insert>
+    </header>
+    </h:form>
+     </ui:insert>
        
         
 <!--seccion1******************************************************************************************************************************************************************************   
@@ -339,7 +349,7 @@ contactenos
                         <div class="contact-form wow fadeInUpBig" data-wow-delay="0.6s">
                             <h2 class="contact-form-title mb-30">Si tienes alguna pregunta contáctenos hoy!</h2>
                             <!-- Contact Form -->
-                            <h:form>
+                            <h:form id="email">
                                 <div class="form-group">
                                     <p:inputText type="text" class="form-control" id="contact-name" placeholder="Nombre completo" value="#{MailBean.nombre}"/>
                                 </div>
@@ -371,22 +381,9 @@ contactenos
                                  <f:selectItem itemValue = "Error en saldo" itemLabel = "Error en saldo" />     
                                 </h:selectOneMenu>  
                               </div>
-                                
-                                
-                              
                                 <div class="form-group">
                                     <p:inputTextarea class="form-control" cols="30" rows="10" placeholder="Mensaje" value="#{MailBean.mensaje}"></p:inputTextarea>
-                                </div>
-                                <!--
-                                <div class="form-group"> 
-                                  <div class="form-group">
-                                      <label for="ejemplo_archivo_1">Adjuntar un archivo</label>
-                                      <input type="file" id="ejemplo_archivo_1"/>
-    
-                                   </div>
-                                </div>   
-                                -->
-                                
+                                </div>     
                                 <div class="checkbox">
   
                                  </div>
