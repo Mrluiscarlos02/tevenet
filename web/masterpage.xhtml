@@ -62,7 +62,7 @@ pendientes: SECCION CONTACTENOS faltante boton adjuntar archivo y estudiar si oc
                         </div>
                         <!-- Search Button Area -->
                         <div class="search_button">
-                            <a class="searchBtn" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                          <!--  <a class="searchBtn" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>-->
                         </div>
                         <!-- Search Form -->
                         <div class="search-hidden-form">
@@ -104,9 +104,13 @@ pendientes: SECCION CONTACTENOS faltante boton adjuntar archivo y estudiar si oc
                                 <li class="nav-item active">
                                     <p:commandLink  class="nav-link" value="Inicio"  action="index?faces-redirect=true" />   
                                 </li>
-                                <li class="nav-item">
-                                    <p:commandLink  class="nav-link" value="Servicios"  action="servicios?faces-redirect=true" />   
-                                </li>                                
+                                 <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="yummyDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Servicios</a>
+                                    <div class="dropdown-menu" aria-labelledby="yummyDropdown">
+                                        <p:commandLink  class="dropdown-item" value="Televisión e Internet"  action="servicios?faces-redirect=true" />
+                                        <p:commandLink  class="dropdown-item" value="Club Cabtoon"  action="clubcabtoon?faces-redirect=true" />  
+                                    </div>
+                                </li>
                                <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="yummyDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Canales</a>
                                     <div class="dropdown-menu" aria-labelledby="yummyDropdown">
@@ -122,14 +126,9 @@ pendientes: SECCION CONTACTENOS faltante boton adjuntar archivo y estudiar si oc
                                         <p:commandLink  class="dropdown-item" value="variedades"  action="canalesvariedades?faces-redirect=true" />                                        
                                     </div>                                     
                                 </li>
-                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="yummyDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Canales Propios</a>
-                                    <div class="dropdown-menu" aria-labelledby="yummyDropdown">
-                                        <p:commandLink  class="dropdown-item" value="Cauca Visión"  action="caucavision?faces-redirect=true" />  
-                                        <p:commandLink  class="dropdown-item" value="Club Cabtoon"  action="clubcabtoon?faces-redirect=true" />  
-                                    </div>
-                                </li>
-                                
+                                <li class="nav-item">
+                                    <p:commandLink  class="nav-link" value="Cauca Visión"  action="caucavision?faces-redirect=true" />
+                                </li> 
                                 <li class="nav-item">
                                     <p:commandLink  class="nav-link" value="Nuestra Empresa"  action="empresa?faces-redirect=true" />  
                                 </li>
